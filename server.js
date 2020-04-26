@@ -8,23 +8,23 @@
 const path = require('path');
 const fs = require('fs');
 
+// PORT
+const PORT = process.env.PORT || 7000;
+
 // Express
 const express = require('express');
 const app = express();
 
-// PORT
-const PORT = process.env.PORT || 7000;
-
-// Save Notes folder
-let savedN = require('./db/db.json');
-
-// app
+// Exp server
 app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Path
-const output_dir = path.resolve(__dirname, "public");
+const output_dir = path.resolve(__dirname, 'public');
+
+// Saved Notes 
+let savedN = require('./db/db.json');
 
 // Generate ID
 let ID = function () {
@@ -41,9 +41,9 @@ function writeN() {
     });
 };
 
-// ----------------------------------------------------------\ app Routes /--------------------------------------------------------------------
+// -----------------------------------------------------\ Express Server Routes /----------------------------------------------------------
 
-//   ----------------\ Pages /------------------
+//   ----------------\ Pages Displays /------------------
 // Homepage
 app.get('/', function (req, res) {
     res.sendFile(path.join(output_dir, 'index.html'));
@@ -54,12 +54,12 @@ app.get('/notes', function (req, res) {
     res.sendFile(path.join(output_dir, 'notes.html'));
 });
 
-//  --------------\ Notes /-----------------
-// Displays notes
+// Notes API 
 app.get('/api/notes', function (req, res) {
     return res.json(savedN);
 });
 
+//  --------------\ Notes /-----------------
 // Post notes
 app.post('/api/notes', function (req, res) {
     let note = req.body;
@@ -71,7 +71,7 @@ app.post('/api/notes', function (req, res) {
     // push note
     savedN.push(note);
 
-    //  writes new notes
+    // Overwrite
     writeN();
 
     return res.json(savedN);
@@ -80,10 +80,10 @@ app.post('/api/notes', function (req, res) {
 // Deletes notes
 app.delete("/api/notes/:id", function (req, res) {
     // ID
-    let id = req.params.id;
+    let id = req.params.id; 
     
     // Loop saved notes array
-    for (let i = 0; i < savedN.length; i++) {
+    for (let i = 0; i < savedN.length; i++) {         
         if (savedN[i].id === id) {
 
             // Delete one note from array

@@ -112,10 +112,10 @@ let renderNoteList = function (notes) {
   for (let i = 0; i < notes.length; i++) {
     let note = notes[i]
 
-    let $li = $("<li class='list-group-item'>").data(note)
+    let $li = $("<li class='list-group-item' style='background-color: rgba(128, 128, 128, 0);'>").data(note)
     let $span = $('<span>').text(note.title)
     let $delBtn = $(
-      "<i class='fas fa-trash-alt float-right text-danger delete-note'>"
+      "<i class='fas fa-trash-alt float-right text-danger delete-note' style='color: goldenrod !important;'>"
     )
 
     $li.append($span, $delBtn)

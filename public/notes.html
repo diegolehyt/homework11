@@ -10,11 +10,43 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/styles.css">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    
+    .bg {
+      /* The image used */
+      background-image: url('https://cdn.pixabay.com/photo/2017/07/13/13/28/paper-2500380_1280.jpg');
+    
+      /* Full height */
+      height: 100%; 
+    
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .navbar {
+      background-image: url('https://www.publicdomainpictures.net/pictures/210000/velka/wooden-background-1490898564QuQ.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .text-light {
+      color: gold !important;
+    }
+    .navbar-brand {
+      font-size: 25px;
+      font-family: monospace;
+    }
+    </style>
 </head>
 
-<body>
-  <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">Note Taker
+<body class='bg'>
+  <nav class="navbar navbar-dark bg-dark" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.418), 0 6px 20px 0 rgba(0, 0, 0, 0.267);">
+    <a class="navbar-brand" href="/" style="color: gold;" style="color: gold;"><span role="img" aria-label="Memo" style="margin-right: 5px;">✒️</span>Note Taker
     </a>
     <div class="icons">
       <i class="fas fa-save text-light save-note"></i>
@@ -24,14 +56,14 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-4 list-container">
-        <div class="card">
+        <div class="card" style="background-color: rgba(128, 128, 128, 0);">
           <ul class="list-group">
           </ul>
         </div>
       </div>
       <div class="col-8">
-        <input class="note-title" placeholder="Note Title" maxlength="28" type="text">
-        <textarea class="note-textarea" placeholder="Note Text"></textarea>
+        <input class="note-title" placeholder="Note Title" maxlength="28" type="text" style="background-color: rgba(128, 128, 128, 0);">
+        <textarea class="note-textarea" placeholder="Note Text" style="background-color: rgba(128, 128, 128, 0);"></textarea>
       </div>
     </div>
   </div>
