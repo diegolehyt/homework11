@@ -5,6 +5,7 @@
 
 ![Main Page](images/1.gif) 
 
+You can find the URL to Deploy this web app, at the end of this Readme file ==> [Go to the Bottom!](#url)  
 
 ## 📌Table of Content
 
@@ -68,11 +69,11 @@ This repository content the files: JavaScript "server.js", Mit license"LICENSE.t
 
  ## 🔗URL  
 
-- The URL to open the repo page on your Browser is "https://diegolehyt.github.io/homework11/"
+- The URL to open from Heroku, the Express Server in your Browser is "https://mighty-eyrie-28086.herokuapp.com/"
 - Check my Demos on Youtube "https://www.youtube.com/channel/UCev6xJU1FGx1IbRjQhtjKcQ"
 
 ## 👤Questions  
-![youtube](https://img.shields.io/badge/YouTube-red?style=flat&logo=youtube)  ![Social](https://img.shields.io/github/followers/diegolehyt?style=social) 
+![youtube](https://img.shields.io/badge/YouTube-red?style=flat&logo=youtube)  ![Heroku](https://img.shields.io/badge/Heroku-purple?style=flat&logo=heroku)  ![Social](https://img.shields.io/github/followers/diegolehyt?style=social) 
 
 ![Profile img](https://avatars1.githubusercontent.com/u/59458188?v=4)
 
